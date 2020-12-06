@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SplashIt!</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="splashit">SplashIt!</string>
+    <string name="photo">photo</string>
+    <string name="fetch_data_failed">Fetch data failed</string>
+</resources>
