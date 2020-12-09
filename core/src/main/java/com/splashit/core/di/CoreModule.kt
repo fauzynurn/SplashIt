@@ -10,6 +10,7 @@ import com.splashit.core.data.remote.ApiService
 import com.splashit.core.data.remote.RemoteDataSource
 import com.splashit.core.domain.repository.IPhotoRepository
 import com.splashit.core.util.AppExecutor
+import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -17,6 +18,8 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
+
+const val baseUrl = "https://api.unsplash.com/"
 
 val databaseModule = module {
     factory { get<AppDatabase>().appDao() }
@@ -31,15 +34,19 @@ val databaseModule = module {
 
 val networkModule = module {
     single {
+        val certificatePinner = CertificatePinner.Builder()
+            .add(baseUrl, "sha256/60J+uBsULLchqgoeQGCJeLilfJP/JWzhwUb06mXkvGM=")
+            .build()
         OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .connectTimeout(120, TimeUnit.SECONDS)
+            .certificatePinner(certificatePinner)
             .readTimeout(120, TimeUnit.SECONDS)
             .build()
     }
     single {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.unsplash.com/")
+            .baseUrl(baseUrl)
             .addConverterFactory(
                 GsonConverterFactory.create(
                     GsonBuilder().setFieldNamingPolicy(

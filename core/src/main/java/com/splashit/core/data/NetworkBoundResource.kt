@@ -2,6 +2,7 @@ package com.splashit.core.data
 
 import com.splashit.core.data.remote.ApiResponse
 import kotlinx.coroutines.flow.*
+import timber.log.Timber
 
 abstract class NetworkBoundResource<ResultType, RequestType> {
 
@@ -12,6 +13,7 @@ abstract class NetworkBoundResource<ResultType, RequestType> {
             emit(Resource.Loading())
             when (val apiResponse = createCall().first()) {
                 is ApiResponse.Success -> {
+                    Timber.i("RESPONSEEEE: $apiResponse")
                     saveCallResult(apiResponse.data)
                     emitAll(loadFromDB().map {
                         Resource.Success(it)

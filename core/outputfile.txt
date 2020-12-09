@@ -1,0 +1,77 @@
+# compiler: R8
+# compiler_version: 2.1.62
+# pg_map_id: a11cc30
+# common_typos_disable
+androidx.databinding.DataBindingComponent -> a.a.a:
+com.splashit.core.DataBinderMapperImpl -> com.splashit.core.DataBinderMapperImpl:
+    android.util.SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP -> a
+    26:31:void <clinit>() -> <clinit>
+    21:21:void <init>() -> <init>
+    93:95:java.util.List collectDependencies() -> collectDependencies
+    87:88:java.lang.String convertBrIdToString(int) -> convertBrIdToString
+    35:56:androidx.databinding.ViewDataBinding getDataBinder(androidx.databinding.DataBindingComponent,android.view.View,int) -> getDataBinder
+    61:73:androidx.databinding.ViewDataBinding getDataBinder(androidx.databinding.DataBindingComponent,android.view.View[],int) -> getDataBinder
+    78:82:int getLayoutId(java.lang.String) -> getLayoutId
+com.splashit.core.DataBinderMapperImpl$InnerBrLookup -> com.splashit.core.DataBinderMapperImpl$a:
+    android.util.SparseArray sKeys -> a
+    99:103:void <clinit>() -> <clinit>
+com.splashit.core.DataBinderMapperImpl$InnerLayoutIdLookup -> com.splashit.core.DataBinderMapperImpl$b:
+    java.util.HashMap sKeys -> a
+    107:112:void <clinit>() -> <clinit>
+com.splashit.core.data.local.entity.PhotoEntity -> b.a.a.a.a.a.a:
+com.splashit.core.data.local.room.AppDatabase -> com.splashit.core.data.local.room.AppDatabase:
+    8:8:void <init>() -> <init>
+com.splashit.core.data.local.room.AppDatabase_Impl -> com.splashit.core.data.local.room.AppDatabase_Impl:
+    25:25:void <init>() -> <init>
+    25:25:java.util.List access$000(com.splashit.core.data.local.room.AppDatabase_Impl) -> a
+    25:25:androidx.sqlite.db.SupportSQLiteDatabase access$602(com.splashit.core.data.local.room.AppDatabase_Impl,androidx.sqlite.db.SupportSQLiteDatabase) -> a
+    25:25:java.util.List access$100(com.splashit.core.data.local.room.AppDatabase_Impl) -> b
+    25:25:void access$700(com.splashit.core.data.local.room.AppDatabase_Impl,androidx.sqlite.db.SupportSQLiteDatabase) -> b
+    25:25:java.util.List access$1000(com.splashit.core.data.local.room.AppDatabase_Impl) -> c
+    123:136:void clearAllTables() -> clearAllTables
+    116:118:androidx.room.InvalidationTracker createInvalidationTracker() -> createInvalidationTracker
+    30:111:androidx.sqlite.db.SupportSQLiteOpenHelper createOpenHelper(androidx.room.DatabaseConfiguration) -> createOpenHelper
+    25:25:java.util.List access$200(com.splashit.core.data.local.room.AppDatabase_Impl) -> d
+    25:25:java.util.List access$300(com.splashit.core.data.local.room.AppDatabase_Impl) -> e
+    25:25:java.util.List access$400(com.splashit.core.data.local.room.AppDatabase_Impl) -> f
+    25:25:java.util.List access$500(com.splashit.core.data.local.room.AppDatabase_Impl) -> g
+    25:25:java.util.List access$800(com.splashit.core.data.local.room.AppDatabase_Impl) -> h
+    25:25:java.util.List access$900(com.splashit.core.data.local.room.AppDatabase_Impl) -> i
+com.splashit.core.data.local.room.AppDatabase_Impl$1 -> com.splashit.core.data.local.room.AppDatabase_Impl$a:
+    com.splashit.core.data.local.room.AppDatabase_Impl this$0 -> a
+    30:30:void <init>(com.splashit.core.data.local.room.AppDatabase_Impl,int) -> <init>
+    33:36:void createAllTables(androidx.sqlite.db.SupportSQLiteDatabase) -> createAllTables
+    40:46:void dropAllTables(androidx.sqlite.db.SupportSQLiteDatabase) -> dropAllTables
+    50:55:void onCreate(androidx.sqlite.db.SupportSQLiteDatabase) -> onCreate
+    59:66:void onOpen(androidx.sqlite.db.SupportSQLiteDatabase) -> onOpen
+    75:75:void onPostMigrate(androidx.sqlite.db.SupportSQLiteDatabase) -> onPostMigrate
+    70:71:void onPreMigrate(androidx.sqlite.db.SupportSQLiteDatabase) -> onPreMigrate
+    79:103:androidx.room.RoomOpenHelper$ValidationResult onValidateSchema(androidx.sqlite.db.SupportSQLiteDatabase) -> onValidateSchema
+com.splashit.core.databinding.PhotoItemLayoutBinding -> b.a.a.b.a:
+    26:29:void <init>(java.lang.Object,android.view.View,int,android.widget.ImageView,com.google.android.material.card.MaterialCardView) -> <init>
+com.splashit.core.databinding.PhotoItemLayoutBindingImpl -> b.a.a.b.b:
+    android.widget.LinearLayout mboundView0 -> a
+    android.util.SparseIntArray sViewsWithIds -> c
+    long mDirtyFlags -> b
+    15:19:void <clinit>() -> <clinit>
+    29:30:void <init>(androidx.databinding.DataBindingComponent,android.view.View) -> <init>
+    32:86:void <init>(androidx.databinding.DataBindingComponent,android.view.View,java.lang.Object[]) -> <init>
+    76:82:void executeBindings() -> executeBindings
+    53:58:boolean hasPendingBindings() -> hasPendingBindings
+    45:49:void invalidateAll() -> invalidateAll
+    69:71:boolean onFieldChange(int,java.lang.Object,int) -> onFieldChange
+    63:64:boolean setVariable(int,java.lang.Object) -> setVariable
+com.splashit.core.databinding.UserPhotoItemLayoutBinding -> b.a.a.b.c:
+    26:29:void <init>(java.lang.Object,android.view.View,int,android.widget.ImageView,com.google.android.material.card.MaterialCardView) -> <init>
+com.splashit.core.databinding.UserPhotoItemLayoutBindingImpl -> b.a.a.b.d:
+    android.widget.LinearLayout mboundView0 -> a
+    android.util.SparseIntArray sViewsWithIds -> c
+    long mDirtyFlags -> b
+    15:19:void <clinit>() -> <clinit>
+    29:30:void <init>(androidx.databinding.DataBindingComponent,android.view.View) -> <init>
+    32:86:void <init>(androidx.databinding.DataBindingComponent,android.view.View,java.lang.Object[]) -> <init>
+    76:82:void executeBindings() -> executeBindings
+    53:58:boolean hasPendingBindings() -> hasPendingBindings
+    45:49:void invalidateAll() -> invalidateAll
+    69:71:boolean onFieldChange(int,java.lang.Object,int) -> onFieldChange
+    63:64:boolean setVariable(int,java.lang.Object) -> setVariable
