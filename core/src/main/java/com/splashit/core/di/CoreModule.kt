@@ -35,7 +35,7 @@ val databaseModule = module {
 val networkModule = module {
     single {
         val certificatePinner = CertificatePinner.Builder()
-            .add(baseUrl, "sha256/60J+uBsULLchqgoeQGCJeLilfJP/JWzhwUb06mXkvGM=")
+            .add("api.unsplash.com", "sha256/60J+uBsULLchqgoeQGCJeLilfJP/JWzhwUb06mXkvGM=")
             .build()
         OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
