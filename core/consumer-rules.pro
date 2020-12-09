@@ -71,3 +71,6 @@
 -keep class com.bumptech.glide.load.data.ParcelFileDescriptorRewinder$InternalRewinder {
   *** rewind();
 }
+
+-keep,includedescriptorclasses class net.sqlcipher.** { *; }
+-keep,includedescriptorclasses interface net.sqlcipher.** { *; }

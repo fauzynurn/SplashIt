@@ -10,6 +10,8 @@ import com.splashit.core.data.remote.ApiService
 import com.splashit.core.data.remote.RemoteDataSource
 import com.splashit.core.domain.repository.IPhotoRepository
 import com.splashit.core.util.AppExecutor
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
 import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -24,11 +26,15 @@ const val baseUrl = "https://api.unsplash.com/"
 val databaseModule = module {
     factory { get<AppDatabase>().appDao() }
     single {
-        Room.inMemoryDatabaseBuilder(
+        val passphrase: ByteArray = SQLiteDatabase.getBytes("splashit".toCharArray())
+        val factory = SupportFactory(passphrase)
+        Room.databaseBuilder(
             androidContext(),
             AppDatabase::class.java
-            //, "Splashit.db"
-        ).fallbackToDestructiveMigration().build()
+            , "Splashit.db"
+        )
+            .openHelperFactory(factory)
+            .fallbackToDestructiveMigration().build()
     }
 }
 
