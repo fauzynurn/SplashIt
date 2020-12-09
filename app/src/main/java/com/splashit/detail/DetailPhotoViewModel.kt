@@ -10,7 +10,7 @@ import com.splashit.core.ui.model.PhotoModel
 import com.splashit.core.ui.model.toDomain
 
 class DetailPhotoViewModel(private val useCase: IPhotoUseCase) : ViewModel() {
-    fun setFavoritePhoto(photo: PhotoModel) : Boolean {
+    fun setFavoritePhoto(photo: PhotoModel): Boolean {
         photo.isFav = !photo.isFav
         useCase.setFavoritePhoto(photo.toDomain())
         return photo.isFav

@@ -1,6 +1,9 @@
 package com.splashit.core.data.local.room
 
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
 import com.splashit.core.data.local.entity.PhotoEntity
 import kotlinx.coroutines.flow.Flow
 

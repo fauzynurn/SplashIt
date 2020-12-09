@@ -30,8 +30,7 @@ val databaseModule = module {
         val factory = SupportFactory(passphrase)
         Room.databaseBuilder(
             androidContext(),
-            AppDatabase::class.java
-            , "Splashit.db"
+            AppDatabase::class.java, "Splashit.db"
         )
             .openHelperFactory(factory)
             .fallbackToDestructiveMigration().build()

@@ -14,7 +14,6 @@ import com.splashit.R
 import com.splashit.core.data.Resource
 import com.splashit.core.ui.UserPhotoAdapter
 import com.splashit.core.ui.model.PhotoModel
-import com.splashit.core.ui.model.toDomain
 import com.splashit.core.ui.model.toPresentationModel
 import com.splashit.databinding.ActivityDetailPhotoBinding
 import org.koin.android.viewmodel.ext.android.viewModel
